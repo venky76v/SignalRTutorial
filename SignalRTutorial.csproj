@@ -3,7 +3,20 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <UserSecretsId>aspnet-SignalRTutorial-F1F0BD2D-4A5E-4397-8066-50298B424318</UserSecretsId>
+    <TypeScriptToolsVersion>2.6</TypeScriptToolsVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\lib\signalr\signalr.js" />
+    <Content Remove="wwwroot\lib\signalr\signalr.js.map" />
+    <Content Remove="wwwroot\lib\signalr\signalr.min.js" />
+    <Content Remove="wwwroot\lib\signalr\signalr.min.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="node_modules\%40aspnet\signalr\package.json" />
+    <Content Include="node_modules\%40aspnet\signalr\src\third-party-notices.txt" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" />
@@ -20,6 +33,125 @@
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.1.0-preview1-final" />
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.1.0-preview1-final" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="node_modules\%40aspnet\signalr\dist\browser\signalr.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\browser\signalr.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\browser\signalr.min.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\browser\signalr.min.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\AbortController.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\AbortController.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\Base64EncodedHubProtocol.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\Base64EncodedHubProtocol.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\browser-index.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\browser-index.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\Common.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\Common.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\Errors.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\Errors.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\HttpClient.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\HttpClient.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\HttpConnection.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\HttpConnection.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\HubConnection.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\HubConnection.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\IConnection.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\IConnection.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\IHubProtocol.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\IHubProtocol.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\ILogger.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\ILogger.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\index.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\index.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\JsonHubProtocol.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\JsonHubProtocol.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\Loggers.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\Loggers.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\Observable.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\Observable.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\TextMessageFormat.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\TextMessageFormat.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\Transports.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\cjs\Transports.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\AbortController.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\AbortController.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\Base64EncodedHubProtocol.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\Base64EncodedHubProtocol.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\browser-index.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\browser-index.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\Common.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\Common.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\Errors.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\Errors.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\HttpClient.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\HttpClient.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\HttpConnection.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\HttpConnection.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\HubConnection.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\HubConnection.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\IConnection.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\IConnection.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\IHubProtocol.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\IHubProtocol.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\ILogger.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\ILogger.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\index.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\index.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\JsonHubProtocol.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\JsonHubProtocol.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\Loggers.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\Loggers.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\Observable.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\Observable.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\TextMessageFormat.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\TextMessageFormat.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\Transports.js" />
+    <None Include="node_modules\%40aspnet\signalr\dist\esm\Transports.js.map" />
+    <None Include="node_modules\%40aspnet\signalr\README.md" />
+    <None Include="wwwroot\lib\signalr\signalr.js" />
+    <None Include="wwwroot\lib\signalr\signalr.js.map" />
+    <None Include="wwwroot\lib\signalr\signalr.min.js" />
+    <None Include="wwwroot\lib\signalr\signalr.min.js.map" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\dist\esm\AbortController.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\dist\esm\Base64EncodedHubProtocol.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\dist\esm\browser-index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\dist\esm\Common.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\dist\esm\Errors.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\dist\esm\HttpClient.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\dist\esm\HttpConnection.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\dist\esm\HubConnection.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\dist\esm\IConnection.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\dist\esm\IHubProtocol.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\dist\esm\ILogger.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\dist\esm\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\dist\esm\JsonHubProtocol.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\dist\esm\Loggers.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\dist\esm\Observable.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\dist\esm\TextMessageFormat.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\dist\esm\Transports.d.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\src\AbortController.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\src\Base64EncodedHubProtocol.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\src\browser-index.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\src\Common.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\src\Errors.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\src\HttpClient.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\src\HttpConnection.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\src\HubConnection.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\src\IConnection.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\src\IHubProtocol.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\src\ILogger.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\src\index.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\src\JsonHubProtocol.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\src\Loggers.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\src\Observable.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\src\TextMessageFormat.ts" />
+    <TypeScriptCompile Include="node_modules\%40aspnet\signalr\src\Transports.ts" />
   </ItemGroup>
 
 </Project>
